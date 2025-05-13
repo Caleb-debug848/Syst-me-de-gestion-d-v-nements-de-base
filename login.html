@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Registration & Login</title>
+    <title>Inscription & Connexion Utilisateur</title>
     <style>
         body {
             margin: 0;
@@ -107,27 +107,27 @@
     <div class="img-container">
     </div>
 
-    <!-- Registration Form -->
+    <!-- Formulaire d'inscription -->
     <div id="registration-form" class="form-container">
-        <h2>Create Account</h2>
+        <h2>Créer un Compte</h2>
         <form onsubmit="registerUser(event)">
-            <input type="text" id="reg-username" placeholder="Username" required>
+            <input type="text" id="reg-username" placeholder="Nom d'utilisateur" required>
             <input type="email" id="reg-email" placeholder="Email" required>
-            <input type="password" id="reg-password" placeholder="Password" required>
-            <button type="submit">Register</button>
+            <input type="password" id="reg-password" placeholder="Mot de passe" required>
+            <button type="submit">S'inscrire</button>
         </form>
-        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        <p>Vous avez déjà un compte ? <a href="#" onclick="showLogin()">Se connecter ici</a></p>
     </div>
 
-    <!-- Login Form -->
+    <!-- Formulaire de connexion -->
     <div id="login-form" class="form-container hidden">
-        <h2>Login to Your Account</h2>
+        <h2>Se Connecter à Votre Compte</h2>
         <form onsubmit="loginUser(event)">
             <input type="email" id="login-email" placeholder="Email" required>
-            <input type="password" id="login-password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <input type="password" id="login-password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
         </form>
-        <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+        <p>Vous n'avez pas de compte ? <a href="#" onclick="showRegister()">S'inscrire ici</a></p>
     </div>
 </div>
 
@@ -146,21 +146,21 @@
         const email = document.getElementById('reg-email').value;
         const password = document.getElementById('reg-password').value;
 
-        const userData = `Username: ${username}\nEmail: ${email}\nPassword: ${password}\n`;
+        const userData = `Nom d'utilisateur: ${username}\nEmail: ${email}\nMot de passe: ${password}\n`;
 
         const handle = await window.showSaveFilePicker({
             suggestedName: 'user_data.txt',
             types: [{
-                description: 'Text Files',
-                accept: {'text/plain': ['.txt']}
-            }]
+                description: 'Fichiers texte',
+                accept: {'text/plain': ['.txt']},
+            }],
         });
 
         const writable = await handle.createWritable();
         await writable.write(userData);
         await writable.close();
 
-        alert('Registration successful! Redirecting to login...');
+        alert('Inscription réussie ! Redirection vers la connexion...');
         showLogin();
     }
 
@@ -171,18 +171,18 @@
 
         const [fileHandle] = await window.showOpenFilePicker({
             types: [{
-                description: 'Text Files',
-                accept: {'text/plain': ['.txt']}
-            }]
+                description: 'Fichiers texte',
+                accept: {'text/plain': ['.txt']},
+            }],
         });
 
         const file = await fileHandle.getFile();
         const contents = await file.text();
-        if (contents.includes(`Email: ${email}`) && contents.includes(`Password: ${password}`)) {
-            alert('Login successful !');
+        if (contents.includes(`Email: ${email}`) && contents.includes(`Mot de passe: ${password}`)) {
+            alert('Connexion réussie !');
             window.location.href = '/index.html';
         } else {
-            alert('Invalid credentials. Please try again.');
+            alert('Identifiants invalides. Veuillez réessayer.');
         }
     }
 </script>
