@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Edit Event</title>
+    <title>Modifier l'Événement</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -88,25 +88,25 @@
 <body>
 
 <div class="container">
-    <h1>Edit Event</h1>
+    <h1>Modifier l'Événement</h1>
     <div class="form-group">
-        <label for="edit-event-name">Event Name:</label>
+        <label for="edit-event-name">Nom de l'Événement :</label>
         <input type="text" id="edit-event-name">
     </div>
     <div class="form-group">
-        <label for="edit-event-date">Event Date:</label>
+        <label for="edit-event-date">Date de l'Événement :</label>
         <input type="text" id="edit-event-date">
     </div>
     <div class="form-group">
-        <label for="edit-event-location">Event Location:</label>
+        <label for="edit-event-location">Lieu de l'Événement :</label>
         <input type="text" id="edit-event-location">
     </div>
     <div class="form-group">
-        <label for="edit-event-description">Event Description:</label>
+        <label for="edit-event-description">Description de l'Événement :</label>
         <textarea id="edit-event-description"></textarea>
     </div>
-    <button onclick="updateEvent()">Update Event</button>
-    <button onclick="cancelEdit()">Cancel</button>
+    <button onclick="updateEvent()">Mettre à jour l'Événement</button>
+    <button onclick="cancelEdit()">Annuler</button>
 </div>
 
 <script>
@@ -149,10 +149,10 @@
             events[index] = event;
             localStorage.setItem('events', JSON.stringify(events));
 
-            alert('Event updated successfully!');
+            alert('Événement mis à jour avec succès !');
             window.location.href = 'view-events.html';
         } else {
-            alert('Please fill out all fields.');
+            alert('Veuillez remplir tous les champs.');
         }
     }
 
@@ -167,7 +167,7 @@
 
 </body>
 <footer>
-    <p>© 2024 Event Management CodeClause. All rights reserved.</p>
-    <p>Designed by <a href="https://vigneshgbe.neocities.org" target="_blank">VIGNESH G</a></p>
+    <p>© 2024 Gestion d'Événements CodeClause. Tous droits réservés.</p>
+    <p>Conçu par <a href="https://vigneshgbe.neocities.org" target="_blank">VIGNESH G</a></p>
 </footer>
 </html>
