@@ -4,7 +4,7 @@ async function registerUser(event) {
     const email = document.getElementById('reg-email').value;
     const password = document.getElementById('reg-password').value;
 
-    const userData = `Username: ${username}\nEmail: ${email}\nPassword: ${password}\n`;
+    const userData = `Nom d'utilisateur: ${username}\nEmail: ${email}\nMot de passe: ${password}\n`;
 
     try {
         const directoryHandle = await window.showDirectoryPicker();
@@ -14,11 +14,11 @@ async function registerUser(event) {
         await writable.write(userData);
         await writable.close();
 
-        alert('Registration successful! Redirecting to login...');
+        alert('Inscription réussie ! Redirection vers la page de connexion...');
         showLogin();
     } catch (error) {
-        console.error('Error saving file:', error);
-        alert('Failed to save your registration. Please Go to direct Login page. Here,  UserName: admin@gmail.com   Password:123 ');
+        console.error('Erreur lors de l\'enregistrement du fichier:', error);
+        alert('Échec de l\'enregistrement de votre inscription. Veuillez aller directement à la page de connexion. Voici les informations de connexion par défaut : \nNom d\'utilisateur : admin@gmail.com\nMot de passe : 123');
     }
 }
 
@@ -31,9 +31,9 @@ async function loginUser(event) {
     const password = document.getElementById('login-password').value;
 
     if (email === defaultEmail && password === defaultPassword) {
-        alert('Login successful! Redirecting to event management page...');
-        window.location.href = 'index.html';
+        alert('Connexion réussie ! Redirection vers la page de gestion des événements...');
+        window.location.href = 'index.html'; // Redirection vers la page principale après connexion
     } else {
-        alert('Invalid credentials. Please try again.');
+        alert('Identifiants invalides. Veuillez réessayer.');
     }
 }
