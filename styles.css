@@ -1,4 +1,4 @@
-/* Body and Container */
+/* Corps et Conteneur */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f0f2f5;
@@ -22,7 +22,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* Form Header */
+/* En-tête du Formulaire */
 .form-header {
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@ body {
     border: 2px solid #007bff;
 }
 
-/* Form Content */
+/* Contenu du Formulaire */
 .form-content {
     display: none;
     margin-top: 25px;
@@ -66,7 +66,7 @@ body {
     opacity: 1;
 }
 
-/* Input Fields */
+/* Champs de saisie */
 form input[type="text"],
 form input[type="password"],
 form input[type="email"] {
@@ -93,7 +93,7 @@ form input[type="email"]:hover {
     border-color: #b3d4fc;
 }
 
-/* Submit Button */
+/* Bouton de Soumission */
 form input[type="submit"] {
     width: 100%;
     padding: 14px 20px;
@@ -129,7 +129,7 @@ form input[type="submit"]:hover {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Mobile Responsiveness */
+/* Responsivité Mobile */
 @media (max-width: 500px) {
     .container {
         width: 100%;
@@ -154,7 +154,8 @@ form input[type="submit"]:hover {
         font-size: 15px;
     }
 }
-/* Input Fields */
+
+/* Champs de saisie */
 form input[type="text"],
 form input[type="password"],
 form input[type="email"] {
@@ -185,7 +186,7 @@ form input[type="email"]:hover {
     background-color: #f0f8ff;
 }
 
-/* Placeholder Text */
+/* Texte du Placeholder */
 form input[type="text"]::placeholder,
 form input[type="password"]::placeholder,
 form input[type="email"]::placeholder {
@@ -200,7 +201,7 @@ form input[type="email"]:focus::placeholder {
     color: #888;
 }
 
-/* Icon Inside Input */
+/* Icône dans le champ de saisie */
 .form-group {
     position: relative;
     margin-bottom: 20px;
@@ -224,7 +225,7 @@ form input[type="email"]:focus::placeholder {
     color: #007bff;
 }
 
-/* Input Field Border Animation */
+/* Animation de la bordure du champ de saisie */
 @keyframes inputGlow {
     0% {
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.1);
