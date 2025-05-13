@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>View Events</title>
+    <title>Voir les Événements</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,12 +95,12 @@
 <body>
 
 <div class="container">
-    <h1>View Events</h1>
+    <h1>Voir les Événements</h1>
     <ul id="event-list" class="event-list">
     </ul>
     <div class="button-group">
-        <button onclick="window.location.href='event-create.html'">Add Event</button>
-        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='event-create.html'">Ajouter un Événement</button>
+        <button onclick="window.location.href='index.html'">Accueil</button>
     </div>
 </div>
 
@@ -116,17 +116,17 @@
             listItem.innerHTML = `
                 <h3>${event.name}</h3>
                 <p><strong>Date:</strong> ${event.date}</p>
-                <p><strong>Location:</strong> ${event.location}</p>
+                <p><strong>Lieu:</strong> ${event.location}</p>
                 <p><strong>Description:</strong> ${event.description}</p>
-                <button onclick="editEvent('${event.name}')">Edit</button>
-                <button onclick="deleteEvent('${event.name}')">Delete</button>
+                <button onclick="editEvent('${event.name}')">Modifier</button>
+                <button onclick="deleteEvent('${event.name}')">Supprimer</button>
             `;
             eventList.appendChild(listItem);
         });
     }
 
     function editEvent(eventName) {
-        alert('Edit functionality is not implemented.');
+        alert('La fonctionnalité de modification n\'est pas implémentée.');
     }
 
     function deleteEvent(eventName) {
@@ -141,7 +141,7 @@
 
 </body>
 <footer>
-    <p>© 2024 Event Management CodeClause. All rights reserved.</p>
-    <p>Designed by <a href="https://vigneshgbe.neocities.org" target="_blank">VIGNESH G</a></p>
+    <p>© 2025 Tous droits réservés. <a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
 </footer>
+
 </html>
