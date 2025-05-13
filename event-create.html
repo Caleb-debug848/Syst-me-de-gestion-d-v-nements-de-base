@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Event</title>
+    <title>Créer un Événement</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -89,25 +89,25 @@
 <body>
 
 <div class="container">
-    <h1>Create New Event</h1>
+    <h1>Créer un Nouvel Événement</h1>
     <div class="form-group">
-        <label for="event-name">Event Name:</label>
+        <label for="event-name">Nom de l'Événement :</label>
         <input type="text" id="event-name">
     </div>
     <div class="form-group">
-        <label for="event-date">Event Date:</label>
+        <label for="event-date">Date de l'Événement :</label>
         <input type="text" id="event-date">
     </div>
     <div class="form-group">
-        <label for="event-location">Event Location:</label>
+        <label for="event-location">Lieu de l'Événement :</label>
         <input type="text" id="event-location">
     </div>
     <div class="form-group">
-        <label for="event-description">Event Description:</label>
+        <label for="event-description">Description de l'Événement :</label>
         <textarea id="event-description"></textarea>
     </div>
-    <button onclick="saveEvent()">Save Event</button>
-    <button onclick="window.location.href='index.html'">Cancel</button>
+    <button onclick="saveEvent()">Enregistrer l'Événement</button>
+    <button onclick="window.location.href='index.html'">Annuler</button>
 </div>
 
 <script>
@@ -130,14 +130,15 @@
             localStorage.setItem('events', JSON.stringify(events));
             window.location.href = 'view-events.html';
         } else {
-            alert('Please fill out all fields.');
+            alert('Veuillez remplir tous les champs.');
         }
     }
 </script>
 
 </body>
 <footer>
-    <p>© 2024 Event Management CodeClause. All rights reserved.</p>
-    <p>Designed by <a href="https://vigneshgbe.neocities.org" target="_blank">VIGNESH G</a></p>
+    <p>© 2024 Gestion d'Événements CodeClause. Tous droits réservés.</p>
+    <p>Conçu par <a href="https://vigneshgbe.neocities.org" target="_blank">VIGNESH G</a></p>
 </footer>
 </html>
+
